@@ -1,0 +1,276 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.navbar {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items:flex-end;
+    justify-content:right;
+    padding: 10px 30px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-logo {
+    height: 40px;
+    margin-right: auto; 
+}
+
+.navbar-items {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-item {
+    margin: 0 10px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.navbar-item a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+.navbar-item a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.navbar-item a i {
+    margin-right: 8px;
+}
+
+
+.center-container {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+
+.search-bar-container {
+    position: relative;
+    width: 300px;
+    margin-top: 20px; /* Adds space from the top */
+}
+
+.search-bar {
+    width: calc(100% - 40px); /* Adjusted width to accommodate search icon */
+    padding: 10px 20px; /* Adjusted padding */
+    font-size: 18px;
+    color: white; /* Text color set to white */
+    border: 2px solid #ff9800; /* Orange border */
+    border-radius: 20px; /* Curved border */
+    background-color: transparent; /* Transparent background */
+    transition: box-shadow 0.3s, transform 0.3s, border-color 0.3s; /* Transition effects */
+}
+
+.search-bar:hover {
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+    transform: scale(1.02);
+}
+
+.search-icon {
+    position: absolute;
+    top: 50%;
+    right: 12px; /* Adjusted position for better alignment */
+    transform: translateY(-50%);
+    color: #ff9800; /* Orange color */
+    font-size: 20px;
+    border: 2px solid #ff9800; /* Orange border */
+    border-radius: 50%; /* Circular shape */
+    padding: 8px; /* Adjusted padding */
+    transition: color 0.3s, border-color 0.3s; /* Transition effects */
+}
+
+.search-icon:hover {
+    color: #e64a19; /* Darker orange color on hover */
+    border-color: #e64a19; /* Darker orange border on hover */
+}
+
+.button-container {
+    display: flex;
+    justify-content: flex-end; /* Align buttons to the right */
+    margin-top: 20px; /* Adds space between search bar and buttons */
+    gap: 10px;
+}
+
+.quality-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 80px;
+    background-color: #ff9800;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.quality-button:hover {
+    background-color: #e68900;
+    transform: scale(1.1);
+}
+
+.image-slider {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+}
+
+.slider {
+    display: flex;
+    animation: slide 10s linear infinite;
+}
+
+.slider-image {
+    width: 500px;
+    height: 300px;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+.contents {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.content-item {
+    text-align: center;
+}
+
+.content-item img {
+    width: 200px; /* Reduce the size of the images */
+    height: auto;
+    border-radius: 15px; /* Make the images curved */
+    transition: transform 0.3s, box-shadow 0.3s; /* Add transition for hover effect */
+}
+
+.content-item img:hover {
+    transform: scale(1.1); /* Scale the image on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add shadow on hover */
+}
+
+.contents {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+.content-item {
+    flex: 1 1 calc(25% - 20px); /* Adjust the width of the items based on your preference */
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-align: center; /* Align text to the right */
+}
+
+.content-item img {
+    width: 100%; /* Make images fit edge to edge */
+    height: auto;
+    border-radius: 15px; /* Make the images curved */
+    transition: transform 0.3s, box-shadow
+
+}
+.next_ex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+}
+
+.navigation-button1,
+.navigation-button3 {
+    padding: 8px;
+    background-color: #ccc;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.navigation-button1:hover,
+.navigation-button3:hover {
+    background-color: #999;
+    transform: scale(1.1);
+}
+
+.search-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.search-bar2 {
+    width: 120px;
+    padding: 8px 30px 8px 12px; /* Adjust padding to make space for the search icon */
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 20px; /* Make the search bar curved */
+    transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.search-bar2:hover {
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    transform: scale(1.02);
+}
+
+.search-icon2{
+    position: absolute;
+    ;
+    left: 130px;
+    color: #666;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.search-bar2:hover + .search-icon,
+.search-icon:hover {
+    color: #333; /* Change color on hover */
+}
